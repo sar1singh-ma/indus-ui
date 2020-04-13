@@ -104,22 +104,25 @@
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User
+                                            <button type="button" tabindex="0" class="dropdown-item">User@industowers.com
                                                 Account</button>
-                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">ADMIN</button>
                                             <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Change Profile pic</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Logout</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
-                                        Alina Mclourd
+                                        Abhishek Singh
+                                    </div>
+									<div class="widget-subheading">
+                                        Circle Manager
                                     </div>
                                     <div class="widget-subheading">
-                                        VP People Manager
+                                        
                                     </div>
                                 </div>
                                 <!--                                 <div class="widget-content-right header-user-info ml-3">
@@ -736,12 +739,12 @@
                 <div class="app-main__inner">
                     <div class="app-page-title">
                         <div class="row">
-                            <div class="col-md-12 m-b-3">
+                            <!-- <div class="col-md-12 m-b-3">
                                 <i style="font-size:24px; margin-left:10px;color:green;margin-right: -14px;"
                                     class="fa float-right">&#xf0ed;</i>
                                 <img src="assets/images/Untitlednew1.png" alt="" class="float-right"
                                     style="margin-bottom: 16px;">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="page-title-wrapper">
                             <div class=" col-md-8 page-title-heading">
@@ -758,7 +761,7 @@
 
 
                             </div>
-                            <div class="col-md-1 mb-2 mr-2 btn-group" style=" float: right;">
+                            <!-- <div class="col-md-1 mb-2 mr-2 btn-group" style=" float: right;">
                                 <button class="btn btn-primary">Gujrat</button>
                                 <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown"
                                     class="dropdown-toggle-split dropdown-toggle btn btn-primary"><span
@@ -771,10 +774,15 @@
                                     <div tabindex="-1" class="dropdown-divider"></div>
                                     <button type="button" tabindex="0" class="dropdown-item">Punjab</button>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="page-title-actions">
 
+                                  <h3>Circle:</h3>
+                                  <span class="multi-select"></span>
+								 
+							   <i style="font-size:24px; color:green;" class="fa ">&#xf0ed;</i>
+                                <img src="assets/images/Untitlednew1.png" alt="" style="margin-bottom: 16px;">
 
 
 
@@ -1373,17 +1381,26 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="PopoverCustomT-1"
                                         class="btn btn-primary btn-sm align-rig">Clear</button>
 
-                                    <div class="btn-actions-pane-right">
+                                    <!-- <div class="btn-actions-pane-right">
                                         <button type="button" style="margin-left: 480px; margin-top: 2px;"
                                             class="btn mr-2 mb-2 btn-primary" data-toggle="modal"
                                             data-target=".bd-example-modal-sm"><i class="fa fa-filter"></i></button>
                                     </div>
-
+									<button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-bars"></i> -->
+                                     
+									 
+									 <div class="btn-actions-pane-right">
+										<button type="button" style="margin-left: 420px; margin-top: 2px;" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fa fa-filter"></i></button>
+										</div>
+										
+										 <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-bars"></i>
+                                                     
+                                        </button>
                                     <div class="btn-actions-pane-right">
 
 
 
-                                        <input placeholder="Search " type="text" class="mb-2 form-control">
+                                       <input placeholder="Search " type="text" class="mb-2 form-control" style ="margin-right:25px">
                                         <!--                                             <div role="group" class="btn-group-sm btn-group">
                                                 <button class="active btn btn-focus">Last Week</button>
                                                 <button class="btn btn-focus">All Month</button>
@@ -2091,10 +2108,219 @@
                 </div>
             </div>
         </div>
+		
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Columns </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               <input type="checkbox" id="siteId" name="siteId1" value="ID">
+  <label for="siteId">siteId</label><br>
+  <input type="checkbox" id="siteStatus" name="siteStatus2" value="Status">
+  <label for="siteStatus">siteStatus</label><br>
+  <input type="checkbox" id="siteName" name="siteName3" value="SiteName">
+  <label for="siteName">siteName</label><br>
+  <input type="checkbox" id="circle" name="circle4" value="Circle">
+  <label for="circle">Circle</label><br>
+  <input type="checkbox" id="equipment Name" name="equipment Name5" value="EquipmentName">
+  <label for="equipment Name">Equipment Name</label><br>
+  <input type="checkbox" id="equipment Status" name="equipment Status6" value="EquipmentStatus">
+  <label for="equipment Status">Equipment Status</label><br>
+  <input type="checkbox" id="packet Status" name="packet Status5" value="PacketStatus">
+  <label for="packet Status">Packet Status</label><br><br>
+				
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
         <script type="text/javascript" src="./assets/scripts/main.js"></script>
+		<script type="text/javascript" src="./assets/scripts/bundle.min.js"></script>
+		
+	<script>
+                                    
+      var multi = new SelectPure(".multi-select", {
+        options: [
+          {
+            label: "Gujrat",
+            value: "GJ",
+          },
+          {
+            label: "Maharashtra",
+            value: "MH",
+          },
+          {
+            label: "Haryana",
+            value: "HR",
+          },
+          {
+            label: "Uttar Pradesh(E)",
+            value: "UP",
+          },
+          {
+            label: "Uttar Pradesh(W)",
+            value: "UP",
+          },
+        ],
+        multiple: true,
+        icon: "fa fa-times",
+        placeholder: "-Please select-",
+        onChange: value => { console.log(value); },
+        classNames: {
+          select: "select-pure__select",
+          dropdownShown: "select-pure__select--opened",
+          multiselect: "select-pure__select--multiple",
+          label: "select-pure__label",
+          placeholder: "select-pure__placeholder",
+          dropdown: "select-pure__options",
+          option: "select-pure__option",
+          autocompleteInput: "select-pure__autocomplete",
+          selectedLabel: "select-pure__selected-label",
+          selectedOption: "select-pure__option--selected",
+          placeholderHidden: "select-pure__placeholder--hidden",
+          optionHidden: "select-pure__option--hidden",
+        }
+      });
+	  
+	
+   </script>
+       <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .select-wrapper {
+        margin: auto;
+        max-width: 600px;
+        width: calc(100% - 40px);
+      }
+
+      .select-pure__select {
+        align-items: center;
+        background: #f9f9f8;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        box-sizing: border-box;
+        color: #363b3e;
+        cursor: pointer;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: left;
+        min-height: 44px;
+        padding: 5px 10px;
+        position: relative;
+        transition: 0.2s;
+        width: 100%;
+		margin-bottom: 10px;
+      }
+
+      .select-pure__options {
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        box-sizing: border-box;
+        color: #363b3e;
+        display: none;
+        left: 0;
+        max-height: 221px;
+        overflow-y: scroll;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        z-index: 5;
+      }
+
+      .select-pure__select--opened .select-pure__options {
+        display: block;
+      }
+
+      .select-pure__option {
+        background: #fff;
+        border-bottom: 1px solid #e4e4e4;
+        box-sizing: border-box;
+        height: 44px;
+        line-height: 25px;
+        padding: 10px;
+      }
+
+      .select-pure__option--disabled {
+        color: #e4e4e4;
+      }
+
+      .select-pure__option--selected {
+        color: #e4e4e4;
+        cursor: initial;
+        pointer-events: none;
+      }
+
+      .select-pure__option--hidden {
+        display: none;
+      }
+
+      .select-pure__selected-label {
+        align-items: 'center';
+        background: #5e6264;
+        border-radius: 4px;
+        color: #fff;
+        cursor: initial;
+        display: inline-flex;
+        justify-content: 'center';
+        margin: 5px 10px 5px 0;
+        padding: 3px 7px;
+      }
+
+      .select-pure__selected-label:last-of-type {
+        margin-right: 0;
+      }
+
+      .select-pure__selected-label i {
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 7px;
+      }
+
+      .select-pure__selected-label img {
+        cursor: pointer;
+        display: inline-block;
+        height: 18px;
+        margin-left: 7px;
+        width: 14px;
+      }
+
+      .select-pure__selected-label i:hover {
+        color: #e4e4e4;
+      }
+
+      .select-pure__autocomplete {
+        background: #f9f9f8;
+        border-bottom: 1px solid #e4e4e4;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .select-pure__placeholder--hidden {
+        display: none;
+      }
+    </style>
 
 </body>
 
