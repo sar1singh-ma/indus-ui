@@ -104,12 +104,10 @@
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">User@industowers.com
-                                                Account</button>
-                                            <button type="button" tabindex="0" class="dropdown-item">ADMIN</button>
-                                             <h6 tabindex="-1" class="dropdown-header">Change Profile pic</h6> 
+                                            <h6 tabindex="-1" class="dropdown-header"> User@industowers.com</h6> 
+                                            <h6 tabindex="-1" class="dropdown-header"> User Role : ADMIN </h6> 
+                                            <button type="button" tabindex="0" class="dropdown-item">Change Profile Pic</button>
                                             <button type="button" tabindex="0" class="dropdown-item">Logout</button>
-                                            <div tabindex="-1" class="dropdown-divider"></div>
                                             <!-- <button type="button" tabindex="0" class="dropdown-item">Logout</button> -->
                                         </div>
                                     </div>
@@ -548,6 +546,26 @@
                                     <i class="metismenu-icon pe-7s-rocket"></i>
                                     Dashboard
                                 </a>
+                                <a href="index.html" class="mm-active">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Modem Status
+                                </a>
+                                <a href="index.html" class="mm-active">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    PDI Report
+                                </a>
+                                <a href="index.html" class="mm-active">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Reports
+                                </a>
+                                <a href="index.html" class="mm-active">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Alarms
+                                </a>
+                                <a href="index.html" class="mm-active">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    
+                                </a>
                             </li>
                             <!-- <li class="app-sidebar__heading">UI Components</li>
                             <li>
@@ -781,7 +799,7 @@
                                   <h3>Circle:</h3>
                                   <span class="multi-select"></span>
 								 
-							   <i style="font-size:24px; color:green;" class="fa ">&#xf0ed;</i>
+							   <!-- <i style="font-size:24px; color:green;" class="fa ">&#xf0ed;</i> -->
                                 <img src="assets/images/Untitlednew1.png" alt="" style="margin-bottom: 16px;">
 
 
@@ -1321,6 +1339,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View Top 5 
+                                </button>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-4">
@@ -1346,6 +1366,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View Top 5 
+                                </button>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-4">
@@ -1371,6 +1393,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View Top 5 
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1585,7 +1609,7 @@
                                                 <div class="widget-chat-wrapper-outer">
                                                     <div
                                                         class="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
-                                                        <canvas id="run-hour-buckets"></canvas>
+                                                        <canvas id="bb-buckets"></canvas>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2055,8 +2079,6 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <a data-toggle="tab" href="#tab-eg1-0" class="btn-shadow active btn btn-primary">Column</a>
-
 
                         <a data-toggle="tab" href="#tab-eg1-1" class="btn-shadow  btn btn-primary">Conditional
                             Filter</a>
@@ -2068,29 +2090,10 @@
 
                     <div class="card-body">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="tab-eg1-0" role="tabpanel">
-                                <input type="checkbox" id="siteId" name="siteId1" value="ID">
-                                <label for="siteId">siteId</label><br>
-                                <input type="checkbox" id="siteStatus" name="siteStatus2" value="Status">
-                                <label for="siteStatus">siteStatus</label><br>
-                                <input type="checkbox" id="siteName" name="siteName3" value="SiteName">
-                                <label for="siteName">siteName</label><br>
-                                <input type="checkbox" id="circle" name="circle4" value="Circle">
-                                <label for="circle">Circle</label><br>
-                                <input type="checkbox" id="equipment Name" name="equipment Name5" value="EquipmentName">
-                                <label for="equipment Name">Equipment Name</label><br>
-                                <input type="checkbox" id="equipment Status" name="equipment Status6"
-                                    value="EquipmentStatus">
-                                <label for="equipment Status">Equipment Status</label><br>
-                                <input type="checkbox" id="packet Status" name="fse" value="PacketStatus">
-                                <label for="FSE">FSE</label><br>
-                                <input type="checkbox" id="packet Status" name="packet Status5" value="PacketStatus">
-                                <label for="packet Status">Packet Status</label><br><br>
-                            </div>
                             <div class="tab-pane" id="tab-eg1-1" role="tabpanel">
 
                                 <input type="radio" id="selection" name="any" value="singleSelection">
-                                <label for="selection">SingleSelection</label><br>
+                                <!-- <label for="selection">SingleSelection</label><br> -->
                                 <input type="radio" id="max dg" name="any" value="Sites running on MAX DG">
                                 <label for="max dg">Sites running on MAX DG</label><br>
                                 <input type="radio" id="other" name="any" value="auto dg Fail">
@@ -2120,19 +2123,21 @@
             </div>
             <div class="modal-body">
                <input type="checkbox" id="siteId" name="siteId1" value="ID">
-  <label for="siteId">siteId</label><br>
+  <label for="siteId">Site Id</label><br>
   <input type="checkbox" id="siteStatus" name="siteStatus2" value="Status">
-  <label for="siteStatus">siteStatus</label><br>
+  <label for="siteStatus">Site Name</label><br>
   <input type="checkbox" id="siteName" name="siteName3" value="SiteName">
-  <label for="siteName">siteName</label><br>
+  <label for="siteName">Avg EB Run Hr</label><br>
   <input type="checkbox" id="circle" name="circle4" value="Circle">
-  <label for="circle">Circle</label><br>
+  <label for="circle">Avg BB Run Hr</label><br>
   <input type="checkbox" id="equipment Name" name="equipment Name5" value="EquipmentName">
-  <label for="equipment Name">Equipment Name</label><br>
+  <label for="equipment Name">Avg DG Run hr</label><br>
   <input type="checkbox" id="equipment Status" name="equipment Status6" value="EquipmentStatus">
-  <label for="equipment Status">Equipment Status</label><br>
+  <label for="equipment Status">Avg Diesel Fill</label><br>
   <input type="checkbox" id="packet Status" name="packet Status5" value="PacketStatus">
-  <label for="packet Status">Packet Status</label><br><br>
+  <label for="packet Status">Avg DG KW</label><br>
+  <input type="checkbox" id="should be" name="packet Status5" value="PacketStatus">
+  <label for="packet Status">Should be Diesel</label><br><br>
 				
             </div>
             <div class="modal-footer">
@@ -2142,6 +2147,69 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade bd-example-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Top 5 Sites</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Site ID</th>                
+                            <th class="text-center">EB Run Hrs</th>
+                            <th class="text-center">BB Run Hrs</th>
+                            <th class="text-center">DG Run Hrs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">IN-1293118 </td>              
+                            <td class="text-center">8.2 </td>
+                            <td class="text-center">1.8</td>
+                            <td class="text-center">14.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">IN-1293118 </td>              
+                            <td class="text-center">8.2 </td>
+                            <td class="text-center">1.8</td>
+                            <td class="text-center">14.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">IN-1293118 </td>              
+                            <td class="text-center">8.2 </td>
+                            <td class="text-center">1.8</td>
+                            <td class="text-center">14.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">IN-1293118 </td>              
+                            <td class="text-center">8.2 </td>
+                            <td class="text-center">1.8</td>
+                            <td class="text-center">14.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">IN-1293118 </td>              
+                            <td class="text-center">8.2 </td>
+                            <td class="text-center">1.8</td>
+                            <td class="text-center">14.2</td>
+                        </tr>
+                 </tbody>
+                </table>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">View More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

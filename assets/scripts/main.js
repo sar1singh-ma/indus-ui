@@ -28740,36 +28740,103 @@
                     }
                 })
             }
-            if (document.getElementById("run-hour-buckets")) {
-                var e = document.getElementById("run-hour-buckets").getContext("2d");
+            if (document.getElementById("bb-buckets")) {
+                var e = document.getElementById("bb-buckets").getContext("2d");
                 var color = Chart.helpers.color;
                 window.myBar = new r.a(e, {
                     type: "bar",
                     data: {
-                        labels: ['0-30', '30-60 ', '60-90 ', '90-120 ',   '>120 '],
+                        labels: ['Mar 21,2020', 'Mar 22,2020', 'Mar 23,2020', 'Mar 24,2020', 'Mar 25,2020', 'Mar 26,2020', 'Mar 27,2020'],
                         datasets: [{
-                            backgroundColor: '#' + (Math.random() * 0xFFFFFF << 0).toString(16),
+                            label: '0-30',
+                            backgroundColor: window.chartColors.orangeRed,
                             data: [
-
-                                Math.floor(Math.random() * 100),
-                                Math.floor(Math.random() * 100),
-                                Math.floor(Math.random() * 100),
-                                Math.floor(Math.random() * 100),
-                                Math.floor(Math.random() * 100),
-                                Math.floor(Math.random() * 100),
+                                100,
+                                110,
+                                120,
+                                110,
+                                100,120,110
                             ]
-                        }]
+                        }, {
+                            label: '30-60',
+                            backgroundColor: window.chartColors.orangebrown,
+                            data: [
+                                10,
+                                11,
+                                10,
+                                25,
+                                19,12,8
+                            ]
+                        }, {
+                            label: '60-90',
+                            backgroundColor: window.chartColors.mustard,
+                            data: [
+                                2,
+                                4,
+                                3,
+                                9,
+                                10,5
+                            ]
+                        },
+                        {
+                            label: '90-120',
+                            backgroundColor: window.chartColors.lime,
+                            data: [
+                                2,
+                                4,
+                                3,
+                                9,
+                                10,5
+                            ]
+                        },
+                        {
+                            label: '>120',
+                            backgroundColor: window.chartColors.limeGreen,
+                            data: [
+                                2,
+                                4,
+                                3,
+                                9,
+                                10,5
+                            ]
+                        }
+                    ]
 
                     },
                     options: {
-                        responsive: !0,
-                        legend: {
-                            display: false,
-                            position: "top"
+                        tooltips: {
+                            mode: "label",
+                            callbacks: {
+                                label: function (tooltipItem, data) {
+                                    const type = data.datasets[tooltipItem.datasetIndex].label;
+                                    const value =
+                                        data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                                    let total = 0;
+                                    for (let i = 0; i < data.datasets.length; i++)
+                                        total += data.datasets[i].data[tooltipItem.index];
+                                    if (tooltipItem.datasetIndex !== data.datasets.length - 1) {
+                                        return (
+                                            type + " : " + value.toFixed(0).replace(/(\d)(?=(\d{3})+\.)/g, "1,")
+                                        );
+                                    } else {
+                                        return [
+                                            type +
+                                            " : " +
+                                            value.toFixed(0).replace(/(\d)(?=(\d{3})+\.)/g, "1,"),
+                                            "Total : " + total
+                                        ];
+                                    }
+                                }
+                            }
                         },
-                        title: {
-                            display: !1,
-                            text: "Chart.js Bar Chart"
+                        responsive: !0,
+                        scales: {
+                            xAxes: [{
+                                stacked: !0
+                            }],
+                            yAxes: [{
+                                stacked: !0
+                            }]
                         }
                     }
                 })
@@ -34211,7 +34278,12 @@
             green: "#28a745",
             blue: "#007bff",
             purple: "#6f42c1",
-            grey: "#6c757d"
+            grey: "#6c757d",
+            orangeRed :"#cc3300",
+            orangebrown :"#cc6600",
+            mustard:"#cc9900",
+            lime:"#cccc00",
+            limeGreen:"#99cc00"
         }, u = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], c = ["#4dc9f6", "#f67019", "#f53794", "#537bc4", "#acc236", "#166a8f", "#00a950", "#58595b", "#8549ba"], h = (i = this).Samples || (i.Samples = {}), p = i.Color, h.utils = {
             srand: function (e) {
                 this._seed = e
